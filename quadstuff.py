@@ -2,25 +2,27 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": 9,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "The percent of people that wear their uniform is: 87.0 %\n"
+      "(1+0j)\n",
+      "(-1+0j)\n"
      ]
     }
    ],
    "source": [
-    "total=18\n",
-    "table= [['day' ,'total people', 'people in class', 'people wearing uniform', 'people not wearing uniform'],\n",
-    "        ['day 1:',total, 16, 14, 2],\n",
-    "        ['day 2:', total, 17, 15, 2]]\n",
-    "\n",
-    "analysis= ((table[1][3] / table[1][2]) + (table[2][3] / table[2][2])) / 2 * 100 // 1\n",
-    "print('The percent of people that wear their uniform is:' , analysis,'%')"
+    "import cmath\n",
+    "def quad(num1, num2, num3):\n",
+    "    d=(num2**2 - 4*num1*num3)\n",
+    "    x1 = (-num2) + (cmath.sqrt(d))/ 2 * num1\n",
+    "    x2 = (-num2) - (cmath.sqrt(d))/ 2 * num1\n",
+    "    print('the x values are {0} and {1}'.format(x1,x2))\n",
+    "quad(1,0,-1)\n",
+    "\n"
    ]
   }
  ],
